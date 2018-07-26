@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : PlainDisplay 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140309
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<style>
+/*CSS block for page design*/
+	#srchbtn:hover {
+		cursor: pointer;
+		font-weight: bold;
+	}
+	a:hover {
+		: red;
+	}
+	.letter {
+		color: #fb4e28;
+	}
+	li {
+		color: #fb4e28;
+	}
+	.user {
+		display: inline-block;
+		position: relative;
+		right: 20px;
+	}
+	#description {
+		font-size: 140%;
+	}
+	#content_difficulty {
+		position: relative;
+		right: 365px;
+	}
+	#content_desc {
+		position: relative;
+		right: 335px;
+	}
+	#content_list {
+		position: relative;
+		right: 135px;
+		top: 5px;
+	}
+	#course_content {
+		position: relative;
+		right: 142px;
+		bottom: 35px;
+	}
+	#course_content_desc {
+		position: relative;
+		right: 260px;
+	}
+	#course_workload {
+		position: relative;
+		right: 366px;
+	}
+	#workload_desc {
+		position: relative;
+		right: 213px;
+	}
+	#relevance {
+		position: relative;
+		right: 369px;
+	}
+	#relevance_desc {
+		position: relative;
+		right: 143px;
+	}
+	#course_expenses {
+		position: relative;
+		right: 290px;
+	}
+	#expense_desc {
+		position: relative;
+		right: 125px;
+	}
+	#in_class {
+		position: relative;
+		right: 352px;
+	}
+	#hours_desc {
+		position: relative;
+		right: 305px;
+	}
+	#best_professor {
+		position: relative;
+		right: 295px;
+	}
+	#professor_desc {
+		position: relative;
+		right: 325px;
+	}
+	#focus {
+		position: relative;
+		right: 290px;
+	}
+	#focus_desc {
+		position: relative;
+		right: 307px;
+	}
+	#course_expenses1 {
+		position: relative;
+		right: 290px;
+	}
+	#professorName {
+		position: relative;
+		right: 295px;
+	}
+	#otherInput {
+		position: relative;
+		right: 290px;
+	}
+</style>
+<script>
+	function priceValidator() {
+
+		function priceValidity(price) {
+			var courseExpenseRegEx = /^\$?\d{1}\d{0,8}(\.\d{1,4})?$/;
+
+			return courseExpenseRegEx.test(price);
+			}
+
+		function emptyInput(price) {
+			var blank = /^\s{0,}$/;
+
+			return blank.test(price);
+			}
+
+			var courseExpense = document.getElementById("course_expenses1").value;
+
+			if(priceValidity(courseExpense) || emptyInput(courseExpense)) {
+				var x = x;
+			} else {
+				alert("Oh no! Your 'Course Expenses' input is invalid!");
+		}
+	}
+
+	function professorValidator() {
+
+		function professorValidity(professor) {
+			var professorRegEx = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u;
+
+			return professorRegEx.test(professor);
+			}
+
+		function emptyInput(professor) {
+			var blank = /^$/;
+
+			return blank.test(professor);
+			}
+		
+			var professorInput = document.getElementById("professorName").value;
+
+			if(professorValidity(professorInput) || emptyInput(professorInput)) {
+				var y = y;
+			} else {
+				alert("Oops! Your 'Recommended Professor' input is invalid!");
+		}
+	}
+
+	function criteriaValidator() {
+
+		function criteriaValidity(criteria) {
+			var criteriaRegEx = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u;
+
+			return criteriaRegEx.test(criteria);
+			}
+
+		function emptyInput(criteria) {
+			var blank = /^$/;
+
+			return blank.test(criteria);
+			}
+		
+			var criteriaInput = document.getElementById("otherInput").value;
+
+			if(criteriaValidity(criteriaInput) || emptyInput(criteriaInput)) {
+				var z = z;
+			} else {
+				alert("Uh-oh! Your 'Grading focus' input is invalid!");
+			}
+	}
+	
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+	<div id="header" class="container">
+		<!--ClassRate.com logo-->
+		<div id="logo">
+			<h1 title = "ClassRate.com"><span class = "letter">C</span>lass<span class = "letter">R</span>a<span class = "letter">+</span>e.com</h1>
+		</div>
+		<!--Links-->
+		<div id="menu">
+			<ul>
+				<li><a href="home_page.html" accesskey="1" title="Home"><font color = #fb4e28>Home</font></a></li>
+				<li><a href="rate_your_class.html" accesskey="2" title="Rate a class"><font color = #fb4e28>Rate a Class</font></a></li>
+				<li><a href="sign_up_page.html" accesskey="3" title="Make an account"><font color = #fb4e28>Sign Up</font></a></li>
+				<li><a href="sign_in_page.html" accesskey="4" title="Sign in"><font color = #fb4e28>Sign in</font></a></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+	<div id="banner">
+		<div class="container">
+			<div class="title">
+				<!--Page title-->
+				<h2><font color = #fc6847>Rate a Class!</font></h2>
+				<br />
+				<!--Temporary school and class name titles-->
+				<span class="byline">School: <br /><br /> Class Name: </span> </div>
+				<br />
+				<br />
+				<!--Page description/instructions-->
+				<p id = "description">Scroll through the variety of criteria we have available for you to rate your class on!</p>
+			<!--Form to collect user data begins here-->
+			<form id = "rateclass_form" action = "Rate_class" method = "POST" onsubmit = "return false">	
+			<ul class="actions">
+			<br />
+			<br />
+			<h4 class = "user" id = "course_content">Course Content: </h4>
+			<textarea rows = "3" cols = "75" placeholder = "Write list here..." id = "content_list" ></textarea>
+			<p id = "course_content_desc"><i>Provide a brief list of some of the content covered in this class...</i></p>
+			<h4 class = "user" id = "content_difficulty"><b>Content Difficulty:  </b></h4>
+			<select name = "Content_Difficulty" class = "user" id = "content_difficulty">
+					<option value = "1">Very easy</option>
+					<option value = "2">Easy</option>
+					<option value = "3">In the middle</option>
+					<option value = "4">Hard</option>
+					<option value = "5">Very hard</option>
+			</select>
+			<p id = "content_desc"><i>How difficult is the content in this course?</i></p>
+			<h4 class = "user" id = "course_workload"><b>Course Workload:  </b></h4>
+			<select name = "Workload" class = "user" id = "course_workload">
+					<option value = "0">No work</option>
+					<option value = "1">> 1 hour</option>
+					<option value = "2">> 2 hours</option>
+					<option value = "3">> 3 hours</option>
+					<option value = "4">> 4 hours</option>
+					<option value = "5">Over 4 hours</option>
+			</select>
+			<p id = "workload_desc"><i>How many hours outside the classroom did you spend studying for this class?</i></p>
+			<h4 class = "user" id = "relevance"><b>Relevance:  </b></h4>
+			<select name = "Relevance" class = "user" id = "relevance">
+					<option value = "5">Very irrelevant</option>
+					<option value = "4">Irrelevant</option>
+					<option value = "3">Moderately relevant</option>
+					<option value = "2">Relevant</option>
+					<option value = "1">Very relevant</option>
+			</select>
+			<p id = "relevance_desc"><i>Is this course completely useless, or does it have some solid relevance to real world occupations?</i>
+			<h4 class = "user" id = "course_expenses"><b>Course Expenses: </b></h4>
+			<select name = "Course_Expenses" id = "course_expenses" class = "user">
+					<option value = "0">No cost</option>
+					<option value = "1">> $50</option>
+					<option value = "2">> $100</option>
+					<option value = "3">> $200</option>
+					<option value = "4">> $300</option>
+					<option value = "5">> $400</option>
+					<option value = "6">Over $400</option>
+				</select>
+				<input type = "text" name = "expense" class = "user" id = "course_expenses1" placeholder = " ie. 170.00" />
+				<p id = "expense_desc"><i>How much did the course materials (ie. textbook) cost you? Use the text-box to approximate the cost.</i></p>
+				<h4 class = "user" id = "in_class">Hours Spent in Class:</h4>
+				<select name = "Hours_in_class" id = "in_class" class = "user">
+					<option value = "0">No Class</option>
+					<option value = "1">> 1 hour</option>
+					<option value = "2">> 2 hours</option>
+					<option value = "3">> 3 hours</option>
+					<option value = "4">> 4 hours</option>
+					<option value = "5">Over 4 hours</option>
+				</select>
+				<p id = "hours_desc"><i>How many hours did you spend in class per week?</i></p>
+				<h4 class = "user" id = "best_professor">Recommended Professor(s):</h4>
+				<input type = "text" placeholder = "Professor Name..." class = "user" id = "professorName">
+				<p id = "professor_desc"><i>Which professor is the best for this course?</i><p>
+				<h4 class = "user" id = "focus">Grading focus:</h4>
+				<select name = "focus" id = "focus" class = "user">
+					<option value = "1">Test</option>
+					<option value = "2">Quiz</option>
+					<option value = "3">Presentation</option>
+					<option value = "4">Essay</option>
+					<option value = "5">Participation</option>
+					<option value = "6">Project</option>
+					<option value = "7">Lab</option>
+					<option value = "8">Homework</option>
+				</select>
+				<input type = "text" class = "elements" id = "otherInput" placeholder = "Other..." />
+				<p id = "focus_desc"><i>What does the majority of your grade consist of?</i></p>
+				<br />
+				<h4 class = "user">Overall Course Grade:</h4>
+				<select name = "overall" id = "overall" class = "user">
+					<option value = "1">A+</option>
+					<option value = "2">A</option>
+					<option value = "3">A-</option>
+					<option value = "4">B+</option>
+					<option value = "5">B</option>
+					<option value = "6">B-</option>
+					<option value = "7">C+</option>
+					<option value = "8">C</option>
+					<option value = "9">C-</option>
+					<option value = "10">D+</option>
+					<option value = "11">D</option>
+					<option value = "12">D-</option>
+					<option value = "13">F</option>
+				</select>
+				<p><i>Now it's your turn to do some grading! Based off of your experience, what grade do you believe this course deserves?</i></p>
+				<!--Final comments text input box-->
+				<h4 id = "element10">Final Comments/Blog Spot:</h4>
+				<textarea rows = "20" cols = "100" placeholder = "Enter comments here..."></textarea>
+				<br />
+				<p><i>Here is the place for to share your overall opinion on this course. Feel free to talk about anything, and remember,<br /> other people will see this and have the oppurtunity to reply!</i></p>
+				<li><input type = "submit" id = "srchbtn" onclick = "priceValidator(); professorValidator(); criteriaValidator();"></li>
+			</ul>
+			</form>
+		</div>
+	</div>
+	<!--White strip towards bottom of page-->
+	<div id="extra" class="container">
+	</div>
+</div>
+<!--Copyright strip-->
+<div id="copyright" class="container">
+	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+</body>
+</html>
