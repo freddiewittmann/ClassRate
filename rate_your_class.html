@@ -48,24 +48,7 @@ Released   : 20140309
 		position: relative;
 		right: 365px;
 	}
-	#content_desc {
-		position: relative;
-		right: 335px;
-	}
-	#content_list {
-		position: relative;
-		right: 135px;
-		top: 5px;
-	}
-	#course_content {
-		position: relative;
-		right: 142px;
-		bottom: 35px;
-	}
-	#course_content_desc {
-		position: relative;
-		right: 260px;
-	}
+	
 	#course_workload {
 		position: relative;
 		right: 366px;
@@ -74,14 +57,6 @@ Released   : 20140309
 		position: relative;
 		right: 213px;
 	}
-	#relevance {
-		position: relative;
-		right: 369px;
-	}
-	#relevance_desc {
-		position: relative;
-		right: 143px;
-	}
 	#course_expenses {
 		position: relative;
 		right: 290px;
@@ -89,14 +64,6 @@ Released   : 20140309
 	#expense_desc {
 		position: relative;
 		right: 125px;
-	}
-	#in_class {
-		position: relative;
-		right: 352px;
-	}
-	#hours_desc {
-		position: relative;
-		right: 305px;
 	}
 	#best_professor {
 		position: relative;
@@ -235,9 +202,6 @@ Released   : 20140309
 			<ul class="actions">
 			<br />
 			<br />
-			<h4 class = "user" id = "course_content">Course Content: </h4>
-			<textarea rows = "3" cols = "75" placeholder = "Write list here..." id = "content_list" ></textarea>
-			<p id = "course_content_desc"><i>Provide a brief list of some of the content covered in this class...</i></p>
 			<h4 class = "user" id = "content_difficulty"><b>Content Difficulty:  </b></h4>
 			<select name = "Content_Difficulty" class = "user" id = "content_difficulty">
 					<option value = "1">Very easy</option>
@@ -257,15 +221,6 @@ Released   : 20140309
 					<option value = "5">Over 4 hours</option>
 			</select>
 			<p id = "workload_desc"><i>How many hours outside the classroom did you spend studying for this class?</i></p>
-			<h4 class = "user" id = "relevance"><b>Relevance:  </b></h4>
-			<select name = "Relevance" class = "user" id = "relevance">
-					<option value = "5">Very irrelevant</option>
-					<option value = "4">Irrelevant</option>
-					<option value = "3">Moderately relevant</option>
-					<option value = "2">Relevant</option>
-					<option value = "1">Very relevant</option>
-			</select>
-			<p id = "relevance_desc"><i>Is this course completely useless, or does it have some solid relevance to real world occupations? (REMOVE)</i>
 			<h4 class = "user" id = "course_expenses"><b>Course Expenses: </b></h4>
 			<select name = "Course_Expenses" id = "course_expenses" class = "user">
 					<option value = "0">No cost</option>
@@ -278,17 +233,7 @@ Released   : 20140309
 				</select>
 				<input type = "text" name = "expense" class = "user" id = "course_expenses1" placeholder = " ie. 170.00" />
 				<p id = "expense_desc"><i>How much did the course materials (ie. textbook) cost you? Use the text-box to approximate the cost.</i></p>
-				<h4 class = "user" id = "in_class">Hours Spent in Class:</h4>
-				<select name = "Hours_in_class" id = "in_class" class = "user">
-					<option value = "0">No Class</option>
-					<option value = "1">> 1 hour</option>
-					<option value = "2">> 2 hours</option>
-					<option value = "3">> 3 hours</option>
-					<option value = "4">> 4 hours</option>
-					<option value = "5">Over 4 hours</option>
-				</select>
-				<p id = "hours_desc"><i>How many hours did you spend in class per week? (REMOVE)</i></p>
-				<h4 class = "user" id = "best_professor">Recommended Professor(s):</h4>
+				<h4 class = "user" id = "best_professor">Recommended Professor:</h4>
 				<input type = "text" placeholder = "Professor Name..." class = "user" id = "professorName">
 				<p id = "professor_desc"><i>Which professor is the best for this course?</i><p>
 				<h4 class = "user" id = "focus">Grading focus:</h4>
