@@ -44,6 +44,10 @@ Released   : 20140309
 	#description {
 		font-size: 140%;
 	}
+	#content_desc {
+		position: relative;
+		right: 335px;
+	}
 	#content_difficulty {
 		position: relative;
 		right: 365px;
@@ -55,31 +59,55 @@ Released   : 20140309
 	}
 	#workload_desc {
 		position: relative;
-		right: 213px;
+		right: 141px;
 	}
 	#course_expenses {
 		position: relative;
 		right: 290px;
 	}
+	#easiest_topic {
+		position: relative;
+		right: 348px;
+	}
+	#easiest_topic_desc {
+		position: relative;
+		right: 260px;
+	}
 	#expense_desc {
 		position: relative;
-		right: 125px;
+		right: 78px;
+	}
+	#hardest_topic {
+		position: relative;
+		right: 347px;
+	}
+	#hardest_topic_desc {
+		position: relative;
+		right: 237px;
+	}
+	#prior_knowledge {
+		position: relative;
+		right: 356px;
+	}
+	#prior_knowledge_desc {
+		position: relative;
+		right: 159px;
 	}
 	#best_professor {
 		position: relative;
-		right: 295px;
+		right: 304px;
 	}
 	#professor_desc {
 		position: relative;
-		right: 325px;
+		right: 215px;
 	}
 	#focus {
 		position: relative;
-		right: 290px;
+		right: 295px;
 	}
 	#focus_desc {
 		position: relative;
-		right: 307px;
+		right: 198px;
 	}
 	#course_expenses1 {
 		position: relative;
@@ -204,6 +232,7 @@ Released   : 20140309
 			<br />
 			<h4 class = "user" id = "content_difficulty"><b>Content Difficulty:  </b></h4>
 			<select name = "Content_Difficulty" class = "user" id = "content_difficulty">
+					<option> </option>
 					<option value = "1">Very easy</option>
 					<option value = "2">Easy</option>
 					<option value = "3">In the middle</option>
@@ -211,18 +240,33 @@ Released   : 20140309
 					<option value = "5">Very hard</option>
 			</select>
 			<p id = "content_desc"><i>How difficult is the content in this course?</i></p>
+			<h4 class = "user" id = "hardest_topic"><b>Hardest Topic: </b></h4>
+			<input type = "text" id = "hardest_topic" placeholder = "eg. Derivatives"/>
+			<p id = "hardest_topic_desc"><i>What did you find to be the most difficult topic covered in this course?</i></p>
+			<h4 class = "user" id = "easiest_topic"><b>Easiest Topic: </b></h4>
+			<input type = "text" id = "easiest_topic" placeholder = "eg. Limits" />
+			<p id = "easiest_topic_desc"><i>What did you find to be the easiest topic covered in this course?</i></p>
+			<h4 class = "user" id = "prior_knowledge"><b>Prior Knowledge Required? : </b></h4>
+			<select name = "Prior_Knowledge" class = "user" id = "prior_knowledge">
+				<option> </option>
+				<option value = "1">Yes</option>
+				<option value = "2">No</option>
+			</select>
+			<p id = "prior_knowledge_desc"><i>Are there any topics that need to be known before understanding the material in this course?</i></p>
 			<h4 class = "user" id = "course_workload"><b>Course Workload:  </b></h4>
 			<select name = "Workload" class = "user" id = "course_workload">
+					<option> </option>
 					<option value = "0">No work</option>
 					<option value = "1">> 1 hour</option>
 					<option value = "2">> 2 hours</option>
 					<option value = "3">> 3 hours</option>
 					<option value = "4">> 4 hours</option>
 					<option value = "5">Over 4 hours</option>
-			</select>
-			<p id = "workload_desc"><i>How many hours outside the classroom did you spend studying for this class?</i></p>
-			<h4 class = "user" id = "course_expenses"><b>Course Expenses: </b></h4>
-			<select name = "Course_Expenses" id = "course_expenses" class = "user">
+				</select>
+				<p id = "workload_desc"><i>How many hours outside of the classroom would be required to master the content in this course?</i></p>
+				<h4 class = "user" id = "course_expenses"><b>Course Expenses: </b></h4>
+				<select name = "Course_Expenses" id = "course_expenses" class = "user">
+					<option> </option>
 					<option value = "0">No cost</option>
 					<option value = "1">> $50</option>
 					<option value = "2">> $100</option>
@@ -232,12 +276,13 @@ Released   : 20140309
 					<option value = "6">Over $400</option>
 				</select>
 				<input type = "text" name = "expense" class = "user" id = "course_expenses1" placeholder = " ie. 170.00" />
-				<p id = "expense_desc"><i>How much did the course materials (ie. textbook) cost you? Use the text-box to approximate the cost.</i></p>
+				<p id = "expense_desc"><i>How much did the course materials (ie. textbook) at your school cost you? Use the text-box to approximate the cost.</i></p>
 				<h4 class = "user" id = "best_professor">Recommended Professor:</h4>
 				<input type = "text" placeholder = "Professor Name..." class = "user" id = "professorName">
-				<p id = "professor_desc"><i>Which professor is the best for this course?</i><p>
+				<p id = "professor_desc"><i>Which professor is the best at teaching this course's material at your school?</i><p>
 				<h4 class = "user" id = "focus">Grading focus:</h4>
 				<select name = "focus" id = "focus" class = "user">
+					<option> </option>
 					<option value = "1">Test</option>
 					<option value = "2">Quiz</option>
 					<option value = "3">Presentation</option>
@@ -248,7 +293,7 @@ Released   : 20140309
 					<option value = "8">Homework</option>
 				</select>
 				<input type = "text" class = "elements" id = "otherInput" placeholder = "Other..." />
-				<p id = "focus_desc"><i>What does the majority of your grade consist of?</i></p>
+				<p id = "focus_desc"><i>What method of grading was mainly used to test your knowledge of the material?</i></p>
 				<br />
 				<h4 class = "user">Overall Course Grade:</h4>
 				<select name = "overall" id = "overall" class = "user">
@@ -268,10 +313,12 @@ Released   : 20140309
 				</select>
 				<p><i>Now it's your turn to do some grading! Based off of your experience, what grade do you believe this course deserves?</i></p>
 				<!--Final comments text input box-->
-				<h4 id = "element10">Final Comments/Blog Spot:</h4>
+				<h4 id = "element10">Tips For Success/Final Comments:</h4>
 				<textarea rows = "20" cols = "100" placeholder = "Enter comments here..."></textarea>
 				<br />
-				<p><i>Here is the place for to share your overall opinion on this course. Feel free to talk about anything, and remember,<br /> other people will see this and have the oppurtunity to reply!</i></p>
+				<p><i>After taking this course, what tips would you give incoming students to help them master the material? <br /> You
+				can also use this section to leave any final comments you may have on the course. Remeber, other students will have <br /> 
+				the oppurtunity to review and reply to your comments!</i></p>
 				<li><input type = "submit" id = "srchbtn" onclick = "priceValidator(); professorValidator(); criteriaValidator();"></li>
 			</ul>
 			</form>
