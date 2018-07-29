@@ -38,10 +38,18 @@ Released   : 20140309
 		position: relative;
 		right: 20px;
 	}
+	.checkbox {
+		position: relative;
+		right: 340px;
+	}
 	/*!--CSS id's*/
 	#best_professor {
 		position: relative;
 		right: 304px;
+	}
+	#communication {
+		position: relative;
+		right: 370px;
 	}
 	#content_desc {
 		position: relative;
@@ -62,6 +70,10 @@ Released   : 20140309
 	#course_workload {
 		position: relative;
 		right: 366px;
+	}
+	#creativity {
+		position: relative;
+		right: 392px;
 	}
 	#description {
 		font-size: 140%;
@@ -94,6 +106,18 @@ Released   : 20140309
 		position: relative;
 		right: 237px;
 	}
+	#logic {
+		position: relative;
+		right: 407px;
+	}
+	#math {
+		position: relative;
+		right: 378px;
+	}
+	#memory {
+		position: relative;
+		right: 377px;
+	}
 	#otherInput {
 		position: relative;
 		right: 290px;
@@ -118,7 +142,14 @@ Released   : 20140309
 		cursor: pointer;
 		font-weight: bold;
 	}
-	
+	#useful_skills {
+		position: relative;
+		right: 434px;
+	}
+	#useful_skills_desc {
+		position: relative;
+		right: 248px;
+	}
 	#workload_desc {
 		position: relative;
 		right: 141px;
@@ -195,6 +226,15 @@ Released   : 20140309
 	}
 	
 </script>
+<script type = "text/javascript">
+				function showfield(name) {
+					if (name == "Yes") {
+						document.getElementById("div1").innerHTML = '<input type = "text" style = "width: 450px; height: 100px;" name = "yes" id = "prior_text" placeholder = "List any topics here..." />';
+					} else {
+						document.getElementById("div1").innerHTML = "";
+					}
+				}
+</script>
 </head>
 <body>
 <div id="wrapper">
@@ -242,6 +282,14 @@ Released   : 20140309
 					<option value = "5">Very hard</option>
 			</select>
 			<p id = "content_desc"><i>How difficult is the content in this course?</i></p>
+			<h4 class = "user" id = "useful_skills"><b>Useful Skills: </b></h4> <br />
+				<input type = "checkbox" class = "checkbox"/><span class = "checkbox" id = "read_comp">Reading Comprehension</span><br />
+				<input type = "checkbox" class = "checkbox" id = "logic"/><span class = "checkbox" id = "logic">Logic</span><br />
+				<input type = "checkbox" class = "checkbox" id = "math"/><span class = "checkbox" id = "math">Mathematical</span><br />
+				<input type = "checkbox" class = "checkbox" id = "memory"/><span class = "checkbox" id = "memory">Memorization</span><br />
+				<input type = "checkbox" class = "checkbox" id = "communication"/><span class = "checkbox" id = "communication">Communication</span><br />
+				<input type = "checkbox" class = "checkbox" id = "creativity"/><span class = "checkbox" id = "creativity">Creativity</span><br /> <br />
+			<p id = "useful_skills_desc"><i>What skills does this course require to do well? Select all that apply.</i></p>
 			<h4 class = "user" id = "hardest_topic"><b>Hardest Topic: </b></h4>
 			<input type = "text" id = "hardest_topic" placeholder = "eg. Derivatives"/>
 			<p id = "hardest_topic_desc"><i>What did you find to be the most difficult topic covered in this course?</i></p>
@@ -249,11 +297,16 @@ Released   : 20140309
 			<input type = "text" id = "easiest_topic" placeholder = "eg. Limits" />
 			<p id = "easiest_topic_desc"><i>What did you find to be the easiest topic covered in this course?</i></p>
 			<h4 class = "user" id = "prior_knowledge"><b>Prior Knowledge Required? : </b></h4>
-			<select name = "Prior_Knowledge" class = "user" id = "prior_knowledge">
+
+			
+			<select name = "Prior_Knowledge" class = "user" id = "prior_knowledge" onchange = "showfield(this.options[this.selectedIndex].text);">
 				<option> </option>
 				<option value = "1">Yes</option>
 				<option value = "2">No</option>
 			</select>
+			<br />
+			<div class = "user" id = "div1"></div>
+			<br />
 			<p id = "prior_knowledge_desc"><i>Are there any topics that need to be known before understanding the material in this course?</i></p>
 			<h4 class = "user" id = "course_workload"><b>Course Workload:  </b></h4>
 			<select name = "Workload" class = "user" id = "course_workload">
