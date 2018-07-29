@@ -33,6 +33,10 @@ Released   : 20140309
 	.letter {
 		color: #fb4e28;
 	}
+	.line {
+		position: relative;
+		right: 230px;
+	}
 	.user {
 		display: inline-block;
 		position: relative;
@@ -286,6 +290,8 @@ Released   : 20140309
 					<option value = "5">Very hard</option>
 			</select>
 			<p id = "content_desc"><i>How difficult is the content in this course?</i></p>
+			<br />
+			<hr align = "center" width = "50%" class = "line"/>
 			<h4 class = "user" id = "useful_skills"><b>Useful Skills: </b></h4> <br />
 				<input type = "checkbox" class = "checkbox"/><span class = "checkbox" id = "read_comp">Reading Comprehension</span><br />
 				<input type = "checkbox" class = "checkbox" id = "logic"/><span class = "checkbox" id = "logic">Logic</span><br />
@@ -294,15 +300,19 @@ Released   : 20140309
 				<input type = "checkbox" class = "checkbox" id = "communication"/><span class = "checkbox" id = "communication">Communication</span><br />
 				<input type = "checkbox" class = "checkbox" id = "creativity"/><span class = "checkbox" id = "creativity">Creativity</span><br /> <br />
 			<p id = "useful_skills_desc"><i>What skills are useful to do well in this course? Select all that apply.</i></p>
+			<br />
+			<hr align = "center" width = "50%" class = "line"/>
 			<h4 class = "user" id = "hardest_topic"><b>Hardest Topic (or Unit): </b></h4>
 			<input type = "text" id = "hardest_topic" placeholder = "eg. Derivatives"/>
 			<p id = "hardest_topic_desc"><i>What did you find to be the most difficult topic covered in this course?</i></p>
+			<br />
+			<hr align = "center" width = "50%" class = "line"/>
 			<h4 class = "user" id = "easiest_topic"><b>Easiest Topic (or Unit): </b></h4>
 			<input type = "text" id = "easiest_topic" placeholder = "eg. Limits" />
 			<p id = "easiest_topic_desc"><i>What did you find to be the easiest topic covered in this course?</i></p>
+			<br />
+			<hr align = "center" width = "50%" class = "line"/>
 			<h4 class = "user" id = "prior_knowledge"><b>Prior Knowledge Required? : </b></h4>
-
-			
 			<select name = "Prior_Knowledge" class = "user" id = "prior_knowledge" onchange = "showfield(this.options[this.selectedIndex].text);">
 				<option> </option>
 				<option value = "1">Yes</option>
@@ -313,6 +323,8 @@ Released   : 20140309
 			<br />
 			<br />
 			<p id = "prior_knowledge_desc"><i>Are there any topics that need to be known before understanding the material in this course?</i></p>
+			<br />
+			<hr align = "center" width = "50%" class = "line"/>
 			<h4 class = "user" id = "course_workload"><b>Course Workload:  </b></h4>
 			<select name = "Workload" class = "user" id = "course_workload">
 					<option> </option>
@@ -324,6 +336,8 @@ Released   : 20140309
 					<option value = "5">Over 4 hours</option>
 				</select>
 				<p id = "workload_desc"><i>How many hours outside of the classroom per week would be required to master the content in this course?</i></p>
+				<br />
+				<hr align = "center" width = "50%" class = "line"/>
 				<h4 class = "user" id = "course_expenses"><b>Course Expenses: </b></h4>
 				<select name = "Course_Expenses" id = "course_expenses" class = "user">
 					<option> </option>
@@ -337,7 +351,8 @@ Released   : 20140309
 				</select>
 				<input type = "text" name = "expense" class = "user" id = "course_expenses1" placeholder = " eg. 170.00" />
 				<p id = "expense_desc"><i>How much did the course materials (eg. textbook) at your school cost you? Use the text-box to approximate the cost.</i></p>
-				
+				<br />
+				<hr align = "center" width = "50%" class = "line" />
 				<h4 class = "user" id = "focus">Grading focus:</h4>
 				<select name = "focus" id = "focus" class = "user">
 					<option> </option>
@@ -353,9 +368,11 @@ Released   : 20140309
 				<input type = "text" class = "elements" id = "otherInput" placeholder = "Other..." />
 				<p id = "focus_desc"><i>What method of grading was mainly used to test your knowledge of the material?</i></p>
 				<br />
+				<hr align = "center" width = "50%" class = "line"/>
 				<h4 class = "user" id = "best_professor">Recommended Professor:</h4>
 				<input type = "text" placeholder = "Professor Name..." class = "user" id = "professorName">
 				<p id = "professor_desc"><i>Which professor is the best at teaching this course's material at your school?</i><p>
+				<br />
 				<!--Final comments text input box-->
 				<h4 id = "element10">Tips For Success/Final Comments:</h4>
 				<textarea rows = "20" cols = "100" placeholder = "Enter comments here..."></textarea>
